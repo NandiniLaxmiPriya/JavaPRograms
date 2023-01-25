@@ -3,6 +3,7 @@ package practice4;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class DisFreq {
 
@@ -25,6 +26,16 @@ public class DisFreq {
 		System.out.println(f);
 		boolean b =Collections.disjoint(m, m2);
 		System.out.println(b);
+		m.forEach((a) -> System.out.println(a));
+		System.out.println("------------------");
+		m.stream().filter(e->e.equals(33)).forEach((n)->System.out.println(n));
+		System.out.println("------------------");
+		m.stream().map(i->i*2).collect(Collectors.toList()).forEach((n)->System.out.println(n));
+		System.out.println("------------------");
+		
+		m.stream().limit(3).forEach((n)->System.out.println(n));
+		System.out.println("------------------");
+		m.stream().limit(4).sorted().forEach((n)->System.out.println(n));
 	}
 
 }
