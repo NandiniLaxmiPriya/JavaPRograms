@@ -11,7 +11,7 @@ public class RegularEp {
 		Pattern p2 = Pattern.compile("wolf$",Pattern.CASE_INSENSITIVE);
 		Matcher m2 = p2.matcher("naruto wolf");
 		Pattern p3 = Pattern.compile("^hhhello");
-		Matcher m3 = p3.matcher("hello naruto");
+		Matcher m3 = p3.matcher("n");
 		Pattern p4 = Pattern.compile("abc|def|hkg");
 		Matcher m4 = p4.matcher("def");
 		if(m4.find())

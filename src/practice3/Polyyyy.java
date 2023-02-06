@@ -23,6 +23,7 @@ int a=9;
 		ab.print();
 		System.out.println(aaa.a+"animals");
 		System.out.println(p.a+"polyy");
+		System.out.println("antopo"+ab.a);
 	}
 
 }

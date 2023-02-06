@@ -16,7 +16,7 @@ class BB extends AA
 class C
 {
 	private static int apples=0;
-	private int mangoes = 0;
+	private static int mangoes = 0;
 	private String name;
 	public C(String n)
 	{
@@ -55,9 +55,8 @@ public class Example {
 		BB b = new BB();
 		a.sayHello();
 		b.sayHello();
-		
-		//a=b;
-		///a.sayHello();
+		a=b;
+		a.sayHello();
 		//b=(BB)a;
 		a = new BB();
 		C c1 = new C("c1");

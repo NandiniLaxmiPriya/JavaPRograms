@@ -2,7 +2,7 @@ package exceptionHandle;
 import java.io.*;
 public class Two2 {
 
-	public static void show() {
+	public  void show() {
 		show2();
 	}
 	public static void show2() throws ArithmeticException {
@@ -16,7 +16,8 @@ public class Two2 {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		show();
+		Two2 tt = new Two2();
+				tt.show();
 	}
 
 }

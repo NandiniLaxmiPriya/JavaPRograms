@@ -1,10 +1,11 @@
-package practice2;
+package practice7;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Collections;
 public class NthSmall {
-	public void getNsmall(int a[],int k)
+	public void getNsmall(int a[],int n)
 	{
+		int occurences=0;
 		HashMap<Integer,Integer> hm = new HashMap<>();
 		int count=0;
 		for(int i=0;i<a.length;i++)
@@ -19,6 +20,7 @@ public class NthSmall {
 				hm.put(a[i], 1);
 			}
 		}
+		System.out.println(hm);
 		System.out.println(hm.keySet());
 		ArrayList<Integer> ar = new ArrayList<>(hm.keySet());
 		Collections.sort(ar);
@@ -26,9 +28,10 @@ public class NthSmall {
 		{
 			count+=1;
 			
-			if(count==k)
+			if(count==n)
 			{
 				System.out.println(i+" "+hm.get(i));
+				occurences=hm.get(i);
 				break;
 			}
 		}
@@ -36,7 +39,7 @@ public class NthSmall {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a[] = {7,2,6,3,1,2,4};
+		int a[] = {7,2,6,3,1,3,2,4};
 		int k = 3;
 		NthSmall nm = new NthSmall();
 		nm.getNsmall(a, k);
